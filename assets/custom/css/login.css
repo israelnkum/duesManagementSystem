@@ -1,0 +1,22 @@
+html{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.login-register {
+    background: url("../../../assets/img/back.png") center center no-repeat;
+    background-size: cover;
+
+    padding: 10% 0;
+    }
+
+.login-box {
+   max-width:450px;
+    margin: 0 auto;
+max-height: 500px;}
+
+.login-sidebar {
+    padding: 0px;
+    margin-top: 0px;
+    height: 100%;
+}
