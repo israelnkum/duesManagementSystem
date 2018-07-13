@@ -54,7 +54,7 @@ if (isset($_POST['btn_login'])){
                     $_SESSION['user_type'] =$row['user_type'];
                     $_SESSION['u_mail'] = $row['email'];
                     $_SESSION['logged_in_time'] = date('h:i a');
-                    $_SESSION['loggedin'] = true;
+                    $_SESSION['loggedin'] = false;
 
                     header("Location: ../../pages/superAdmin/dashboard/dashboard.superAdmin.php?loginSuccess=".urlencode("Welcome"));
                     exit();
