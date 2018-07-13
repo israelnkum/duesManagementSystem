@@ -24,10 +24,6 @@ if (isset($_POST['btn_login'])){
 
         header("Location: ../../index.php?err=".urlencode("Oops! Username does Not Match any Record!"));
     } else{
-
-        //User account found. Check to see if the given password matches the
-        //password hash that we stored in our supervisors table.
-
         //Compare the passwords.
         $validPassword = password_verify($userPassword, $row['user_password']);
 
@@ -54,7 +50,7 @@ if (isset($_POST['btn_login'])){
                     $_SESSION['user_type'] =$row['user_type'];
                     $_SESSION['u_mail'] = $row['email'];
                     $_SESSION['logged_in_time'] = date('h:i a');
-                    $_SESSION['loggedin'] = false;
+                    $_SESSION['loggedin'] = true;
 
                     header("Location: ../../pages/superAdmin/dashboard/dashboard.superAdmin.php?loginSuccess=".urlencode("Welcome"));
                     exit();
