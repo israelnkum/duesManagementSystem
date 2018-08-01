@@ -47,11 +47,11 @@
 			
 			rename($file,$fileNameNew);
 			
-			header("Location: ../../../pages/superAdmin/users/allUsers.php?user_update_success=".urlencode("Successfully updated"));
+			header("Location: ../../../pages/superAdmin/dashboard/dashboard.superAdmin.php?user_update_success=".urlencode("Successfully updated"));
 			exit();
 			
 		}else{
-			header("Location: ../../../pages/superAdmin/users/allUsers.php?user_update_error=".urlencode("Error While Updating"));
+			header("Location: ../../../pages/superAdmin/users/updateProfile.php?user_update_error=".urlencode("Error While Updating"));
 			exit();
 		}
 		$connection=null;

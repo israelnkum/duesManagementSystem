@@ -151,12 +151,7 @@ include '../../../includes/superAdmin/downNavs.inc.php';
             </a>
 
             <hr>
-	        <?php if (isset($_GET['user_update_success'])) { ?>
-		        <div class="alert alert-success alert-dismissable col-sm-12 text-center">
-			        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-			        <?php echo $_GET['user_update_success'];?>
-		        </div>
-	        <?php } ?>
+
 
 	        <?php if (isset($_GET['user_update_error'])) { ?>
 		        <div class="alert alert-danger alert-dismissable col-sm-12 text-center">

@@ -5,10 +5,10 @@
 		private $state_csv =false;
 		public function __construct()
 		{
-			parent::__construct("localhost", "root", "","it_managementSystem");
+			parent::__construct("localhost", "root", "","duesMgmtSystem");
 			
 			if ($this->connect_error){
-				die("Fail to connect to Database: ".$this->connect_error);
+				die("Failed to connect to Database: ".$this->connect_error);
 			}
 		}
 		
@@ -60,13 +60,13 @@
 			if ($this->state_csv){
 				?>
 				<script type="text/javascript">
-                    window.location.assign("http://localhost/projectAshonFinalWork/pages/superAdmin/students/uploadStudent.php?file_uploadSuccess=".concat("File Uploaded Successfully"));
+                    window.location.assign("http://localhost/duesManagementSystem/pages/superAdmin/students/uploadStudent.php?file_uploadSuccess=".concat("File Uploaded Successfully"));
 				</script>
 				<?php
 			}else{
 				?>
 				<script type="text/javascript">
-                    window.location.assign("http://localhost/projectAshonFinalWork/pages/superAdmin/students/uploadStudent.php?file_not_uploaded=".concat("Something went wrong! Try Again Later"));
+                    window.location.assign("http://localhost/duesManagementSystem/pages/superAdmin/students/uploadStudent.php?file_not_uploaded=".concat("Something went wrong! Try Again Later"));
 				</script>
 				<?php
 			}

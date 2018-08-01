@@ -40,13 +40,23 @@
             <!-- Bread crumb and right sidebar toggle -->
             <!-- ============================================================== -->
             <div class="row page-titles">
-                <div class="col-md-5 col-8 align-self-center">
+                <div class="col-md-4 col-8 align-self-center">
                     <h3 class="text-themecolor">Dashboard</h3>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
                         <li class="breadcrumb-item active">Dashboard</li>
                     </ol>
                 </div>
+
+                <div class="col-md-8">
+                    <?php if (isset($_GET['user_update_success'])) { ?>
+                        <div class="alert alert-success alert-dismissable col-sm-12 text-center">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            <?php echo $_GET['user_update_success'];?>
+                        </div>
+                    <?php } ?>
+                </div>
+
             </div>
             <!-- ============================================================== -->
             <!-- End Bread crumb and right sidebar toggle -->
@@ -70,6 +80,7 @@
 
                                 </div>
                             </div>
+
                             <div class="row">
                                 <div class="col-12 p-t-10 p-b-20 text-right">
                                     <h5 class="font-light text-white">
@@ -85,7 +96,7 @@
                                         ?>
                                     </h5>
 
-                                    <h6 class="font-weight-light text-white">Updted Now</h6>
+                                    <h6 class="font-weight-light text-white">Updated Now</h6>
                                 </div>
                             </div>
                         </div>
@@ -120,7 +131,7 @@
                                         ?>
                                     </h5>
 
-                                    <h6 class="font-weight-light text-white">Updted Now</h6>
+                                    <h6 class="font-weight-light text-white">Updated Now</h6>
                                 </div>
                             </div>
                         </div>
@@ -161,7 +172,7 @@
                                         ?>
                                     </h5>
 
-                                    <h6 class="font-weight-light text-white">Updted Now</h6>
+                                    <h6 class="font-weight-light text-white">Updated Now</h6>
                                 </div>
                             </div>
                         </div>
@@ -195,7 +206,7 @@
 	                                    ?>
                                     </h4>
 
-                                    <h6 class="font-weight-light text-white">Updted Now</h6>
+                                    <h6 class="font-weight-light text-white">Updated Now</h6>
                                 </div>
                             </div>
                         </div>

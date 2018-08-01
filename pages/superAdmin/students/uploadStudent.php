@@ -1,5 +1,3 @@
-
-
 <?php
 	
 	include '../../../includes/superAdmin/header.inc.php';
@@ -26,7 +24,7 @@
 				$fileExt = explode('.',$fileName);
 				$fileAcutalExt = strtolower(end($fileExt));
 				
-				$allowed = array('csv');
+				$allowed = array('csv','xlsx');
 				
 				if (!in_array($fileAcutalExt, $allowed)){
 					?>
