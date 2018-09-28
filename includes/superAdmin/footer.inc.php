@@ -307,22 +307,23 @@ Do you <span class="lead text-danger">really</span> want to reverse
 			<form class="needs-validation" novalidate method="post" action="../../../validation/superAdmin/students/addNewStudent.php" id="addNewStudentForm">
 				<div class="modal-body">
 					<div class="form-row form-material">
-						<div class="col-md-4 mb-3">
-							<label class="text-primary" for="stdFirstName">First name</label>
+						<div class="col-md-8 mb-3">
 							<input type="text" class="form-control" id="stdFirstName" name="stdFirstName" placeholder="First name" required>
 							<div class="invalid-feedback">
 								First Name is required
 							</div>
 						</div>
-						<div class="col-md-4 mb-3">
-							<label class="text-primary" for="stdLastName">Last name</label>
+                    </div>
+                    <div class="form-row form-material">
+						<div class="col-md-8 mb-3">
 							<input type="text" class="form-control " id="stdLastName" name="stdLastName" placeholder="Last name" required>
 							<div class="invalid-feedback">
 								Last Name is required
 							</div>
 						</div>
-						<div class="col-md-4 mb-3">
-							<label class="text-primary" for="stdOtherName">Other Name</label>
+                    </div>
+                    <div class="form-row form-material">
+						<div class="col-md-8 mb-3">
 							<div class="input-group">
 								<input type="text" class="form-control form-control-line" id="stdOtherName" name="stdOtherName" placeholder="Othername">
 								<div class="invalid-feedback">
@@ -332,15 +333,15 @@ Do you <span class="lead text-danger">really</span> want to reverse
 						</div>
 					</div>
 					<div class="form-row form-material">
-						<div class="col-md-4 mb-3">
-							<label class="text-primary" for="stdIndexNumber">Index Number</label>
+						<div class="col-md-8 mb-3">
 							<input type="text" class="form-control" id="stdIndexNumber" name="stdIndexNumber" placeholder="Index Number" maxlength="20" minlength="8" required>
 							<div class="invalid-feedback">
 								Index Number is required
 							</div>
 						</div>
-						<div class="col-md-4 mb-3">
-							<label class="text-primary" for="stdClass">Class</label>
+                    </div>
+                    <div class="form-row form-material">
+						<div class="col-md-8 mb-3">
 							<select id="stdClass" name="stdClass" class="custom-select form-control" required>
 								<option value="">Select Class</option>
 								<option value="HND Level 100">HND Level 100</option>
@@ -356,8 +357,9 @@ Do you <span class="lead text-danger">really</span> want to reverse
 							</div>
 						</div>
 
-						<div  class="col-md-4 mb-3">
-							<label class="text-primary" for="stdPhoneNumber">Phone</label>
+                    </div>
+                    <div class="form-row form-material">
+						<div  class="col-md-8 mb-3">
 							<input type="number" class="form-control" id="stdPhoneNumber" name="stdPhoneNumber" placeholder="Phone Number" maxlength="10" minlength="10"  required>
 							<div class="invalid-feedback">
 								Phone Number is required

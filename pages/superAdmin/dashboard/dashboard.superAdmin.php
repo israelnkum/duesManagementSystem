@@ -40,23 +40,47 @@
             <!-- Bread crumb and right sidebar toggle -->
             <!-- ============================================================== -->
             <div class="row page-titles">
-                <div class="col-md-4 col-8 align-self-center">
-                    <h3 class="text-themecolor">Dashboard</h3>
+                <div class="col-md-3 col-8 align-self-center">
+                    <h3 class="text-themecolor m-b-0 m-t-0">Dashboard</h3>
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                        <li class="breadcrumb-item"><a href="../dashboard/dashboard.superAdmin.php">Home</a></li>
                         <li class="breadcrumb-item active">Dashboard</li>
                     </ol>
                 </div>
 
-                <div class="col-md-8">
-                    <?php if (isset($_GET['user_update_success'])) { ?>
-                        <div class="alert alert-success alert-dismissable col-sm-12 text-center">
-                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                            <?php echo $_GET['user_update_success'];?>
-                        </div>
-                    <?php } ?>
-                </div>
 
+                <div class="col-md-9 col-4 align-self-center">
+                    <div class="d-flex m-t-10 justify-content-end">
+                        <div class="d-flex m-r-20 m-l-10 hidden-md-down">
+                            <div class="chart-text m-r-10">
+                                <h6 class="m-b-0"><small class="text-uppercase">Today's Collection</small></h6>
+                                <h4 class="m-t-0 text-info">
+                                    <?php
+                                    include '../../../validation/db_Connection.php';
+
+                                    //$sql= "SELECT COUNT(`std_class`) as num FROM `students` WHERE std_class=:hndLeve100";
+                                    $sql = "SELECT SUM(`amount_paid`) as amt FROM payment_log WHERE currentUser =:currentUser AND DATE(datePaid)= :datePaid";
+
+                                    $stmt = $connection->prepare($sql);
+                                    $stmt->bindValue(':currentUser', $_SESSION['u_name']);
+                                    $stmt->bindValue(':datePaid', date('Y-m-d'));
+                                    $stmt->execute();
+                                    $row = $stmt->fetch(PDO::FETCH_ASSOC);
+                                    echo $row['amt'];
+                                    ?>
+                                </h4>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <!--					<div class="">-->
+                        <!--						<button class="right-side-toggle waves-effect waves-light btn-success btn btn-circle btn-sm pull-right m-l-10"><i class="ti-settings text-white"></i></button>-->
+                        <!--					</div>-->
+                    </div>
+                </div>
             </div>
             <!-- ============================================================== -->
             <!-- End Bread crumb and right sidebar toggle -->

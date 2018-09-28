@@ -23,7 +23,7 @@ if (isset($_POST['makePaymentBtn'])) {
 	 $std_id =!empty($_POST['std_id']) ? trim($_POST['std_id']) : null;
 	$amtPaid = !empty($_POST['amtPaid']) ? trim($_POST['amtPaid']) : null;
    $amtPaying = !empty($_POST['amtPaying']) ? trim($_POST['amtPaying']) : null;
-	 $amtInWords = !empty($_POST['amtInWords']) ? trim($_POST['amtInWords']) : null;
+	// $amtInWords = !empty($_POST['amtInWords']) ? trim($_POST['amtInWords']) : null;
 	$lacost = !empty($_POST['lacost']) ? trim($_POST['lacost']) : null;
 	$arrears = $maximum- ($amtPaying + $amtPaid);
 	
@@ -93,15 +93,15 @@ else $RefDate = "iTSU".$currentDate; // lebih dari 10000
 	$LacostStmt->execute();
 
 // Insert into the students table if index number does not exist
-        $sql = "INSERT INTO `payment_log`(`std_id`, `amount_paid`,arrears, `amtInWord`,`receipt_id`,payment_type,refDate,datePaid,currentUser)
-          VALUES (:std_id, :amount_paid,:arrears, :amtInWord, :receipt_id,:payment_type, :refDate,:datePaid,:currentUser)";
+        $sql = "INSERT INTO `payment_log`(`std_id`, `amount_paid`,arrears,`receipt_id`,payment_type,refDate,datePaid,currentUser)
+          VALUES (:std_id, :amount_paid,:arrears, :receipt_id,:payment_type, :refDate,:datePaid,:currentUser)";
 	
 	 
         $stmt = $connection-> prepare($sql);
         $stmt->bindValue(':std_id',$std_id);
         $stmt->bindValue(':amount_paid',$amtPaying);
         $stmt->bindValue(':arrears',$arrears);
-	    $stmt->bindValue(':amtInWord',$amtInWords);
+	   // $stmt->bindValue(':amtInWord',$amtInWords);
 	    $stmt->bindValue(':receipt_id',$newRef);
 		$stmt->bindValue(':payment_type','New Payment');
 	    $stmt->bindValue(':refDate',$RefDate);

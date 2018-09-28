@@ -26,34 +26,39 @@
 //                echo "<pre>";
 //                print_r($row);
 //                echo "</pre>";
-					$checkSql = "SELECT `index_number` FROM `students` WHERE `index_number`='$row[3]'";
+                    $indexNumber = "0".$row[3];
+					$checkSql = "SELECT `index_number` FROM `students` WHERE `index_number`='$indexNumber'";
 					$result = $this->query($checkSql);
-					
+
+//die($indexNumber);
+
 					if($row1 = mysqli_fetch_assoc($result)>0) {
 						$rowIndex = $row1['index_number'];
 						$me = "UPDATE `students` SET
 						`firstName`='$row[0]',`lastName`='$row[1]',`otherName`='$row[2]',
 						`index_number`='$row[3]',`std_class`=$row[4],`phone`=$row[5]
 						 WHERE index_number ='$rowIndex'";
-						
+
+
 						if ($this->query($me)) {
 							$this->state_csv = true;
 						} else {
 							$this->state_csv = true;
 						}
-						
-						
+
+
 					}
 					else {
-						
+					   $indexNumber = "0".$row[3];
+                        $phoneNumber = "0".$row[5];
 						$sql = "INSERT INTO students(firstName, lastName, otherName, index_number,std_class, phone)
-                        VALUES ('$row[0]','$row[1]','$row[2]','$row[3]','$row[4]','$row[5]')";
+                        VALUES ('$row[0]','$row[1]','$row[2]','$indexNumber','$row[4]','$phoneNumber')";
 						if ($this->query($sql)) {
 							$this->state_csv = true;
 						} else {
 							$this->state_csv = false;
 						}
-						
+
 					}
 				}
 			}//while

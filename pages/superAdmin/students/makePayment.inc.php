@@ -372,13 +372,7 @@
 												}
 
 										echo '
-												<div class="col-md-4 mb-3">
-													<label for="amtInWords">Amount In Words</label>
-													<input type="text" class="form-control" id="amtInWords" name="amtInWords" placeholder="Amount in Words" required>
-													<div class="invalid-feedback">
-														This Field is required
-													</div>
-												</div>
+												
 
 												<div class="col-md-4 mb-3">
 												<label for="lacost">Lacost</label>

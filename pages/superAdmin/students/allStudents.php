@@ -236,19 +236,19 @@
 				<div class="card">
 					<div class="card-body text-dark">
 						<div class="container-fluid">
-							<table class="tablesaw table-responsive-md table-hover table table-bordered"   id="stdTable" data-tablesaw-mode="swipe">
+							<table class="table-responsive-md table-hover table table-bordered"   id="stdTable" >
 								<thead>
 								<tr>
-									<th scope="col" data-tablesaw-sortable-col >#</th>
-									<th scope="col" data-tablesaw-sortable-col >Name</th>
-									<th scope="col" data-tablesaw-sortable-col >Index Number</th>
-									<th scope="col" data-tablesaw-sortable-col >Class</th>
-									<th scope="col" data-tablesaw-sortable-col >Dues Paid</th>
-									<th scope="col" data-tablesaw-sortable-col >Lacost</th>
-									<th scope="col" data-tablesaw-sortable-col >Status</th>
-									<th scope="col" data-tablesaw-sortable-col >Phone</th>
-									<th scope="col" data-tablesaw-sortable-col >Action</th>
-									<th scope="col" data-tablesaw-sortable-col >Payment</th>
+									<th >#</th>
+									<th >Name</th>
+									<th >Index Number</th>
+									<th >Class</th>
+									<th >Dues Paid</th>
+									<th >Lacost</th>
+									<th >Status</th>
+									<th >Phone</th>
+									<th >Action</th>
+									<th >Payment</th>
 								</tr>
 								</thead>
 							
